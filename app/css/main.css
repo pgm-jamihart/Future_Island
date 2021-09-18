@@ -1,0 +1,342 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-image: url("../media/pattern-2021\ \(1\).svg");
+  background-repeat: bottom left repeat-x;
+  background-size: auto 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+  
+}
+
+ul {
+  list-style: none;
+}
+
+.logo {
+  background-image: url("../media/logo-2021.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-width: 8rem;
+  width: 10rem;
+  height: 7rem;
+  margin: 1rem;
+}
+
+.nav {
+  height: fit-content;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: linear-gradient(270deg, #ffa29c 5.19%, #643cfa 100%);
+}
+
+ul.navList{
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.nav li {
+  list-style-type: none;
+}
+
+.nav ul:last-child {
+  background-color: rgba(0, 0, 0, 0.496);
+  padding: 0.2rem;
+}
+
+.burger {
+  background-color: white;
+  height: 30px;
+  padding: 5px;
+  display: none;
+  margin: 1rem;
+}
+
+.burger div{
+  width: 23px;
+  height: 4px;
+  background-color:rgb(73,110,232); 
+  margin: 5px;
+}
+
+@media screen and (max-width: 1080px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  .nav {
+    position: relative;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    transform: translateX(150%);
+    height: 0;
+    transition: transform 0.2s ease-in;
+  }
+
+  header {
+    background-repeat: no-repeat;
+    padding: 1rem;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+  height: auto;
+}
+
+.lineUp--filter ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.lineUp--filter a {
+  text-decoration: none;
+  padding: 2rem;
+  font-weight: 900;
+  color: blue;
+}
+
+.lineUp--filter a:hover {
+  color: black;
+}
+
+.lineUp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.artiesten {
+  margin: 1rem;
+  margin-right: 0.5rem;
+  position: relative;
+  flex-grow: 1;
+  width: 23rem;
+}
+
+.artiesten img {
+  width: 98%;
+  height: 23rem;
+  transition: 0.3s all ease-in-out;
+}
+
+.artiesten img:hover {
+  transform: scale(1.05);
+}
+
+#closing--button {
+  position: absolute;
+  right: 20%;
+  top: 0.5rem;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+#closing--button svg {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+  transition: all 0.2s ease;
+}
+
+#closing--button:hover svg {
+  fill: blue;
+}
+
+.outer--container--details {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.626);
+}
+
+.inner--container--details {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  z-index: 9999;
+  overflow: auto;
+  opacity: 1;
+  box-sizing: border-box;
+  transition: all .2s ease-in-out;
+  background-color: rgb(255, 255, 255);
+}
+
+.artiesten--selected p {
+  padding: 1.5rem;
+}
+
+.artiesten--selected h3 {
+  padding-left: 1.5rem;
+}
+
+.artiesten--selected ul{
+  padding: 0;
+  margin-left: 1.5rem;
+}
+
+.artiesten--selected img {
+  width: 100%;
+  height: 37rem;
+  right: 0;
+}
+
+.artiesten--selected h2 {
+  position: absolute;
+  top: 63.5%;
+  left: 1rem;
+  color: white;
+  padding: 0.5rem;
+  font-size: 2.5rem;
+  background: linear-gradient(87deg, rgba(207, 107, 0, 1) 0%, rgba(210, 196, 34, 1) 30%, rgba(210, 34, 192, 1) 59%, rgba(48, 34, 210, 1) 82%, rgba(34, 210, 205, 1) 100%);
+}
+
+.artiesten--selected .container__playday__place {
+  display: flex;
+  position: absolute;
+  top: 62%;
+  left: 1rem;
+  font-weight: 700;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.artiesten--selected .container__playday__place p{
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.artiesten--selected .artiesten__playday {
+  color: white;
+  background: blue;
+  padding: 0.1rem 0.5rem;
+  padding: 0.5rem;
+  
+}
+
+.artiesten--selected .artiesten__place {
+  background: white;
+  padding: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  padding: 0.5rem;
+}
+
+.artiesten.verborgen {
+  display: none;
+}
+
+.artiesten h2 {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0.5rem;
+  color: white;
+  padding: 0.5rem;
+  background: linear-gradient(87deg, rgba(207, 107, 0, 1) 0%, rgba(210, 196, 34, 1) 30%, rgba(210, 34, 192, 1) 59%, rgba(48, 34, 210, 1) 82%, rgba(34, 210, 205, 1) 100%);
+}
+
+.artiesten .container__playday__place {
+  display: flex;
+  position: absolute;
+  bottom: 3.4rem;
+  left: 0.5rem;
+  font-weight: 700;
+  font-size: large;
+  text-transform: uppercase;
+  
+}
+.container__playday__place p{
+  padding: 0;
+  margin: 0;
+}
+
+.artiesten .artiesten__playday {
+  color: white;
+  background: blue;
+  padding: 0.1rem 0.5rem;
+  padding: 0.5rem;
+  
+}
+
+.artiesten .artiesten__place {
+  background: white;
+  padding: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  padding: 0.5rem;
+}
+
+.timer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: blue;
+}
+
+ul.socialList {
+  padding: 0;
+}
+
+.social a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+}
+
+.social li {
+  list-style-type: none;
+}
+
+.social svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  fill: white;
+  background: black;
+  padding: 0.5rem;
+}
